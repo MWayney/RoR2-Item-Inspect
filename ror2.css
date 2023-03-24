@@ -1,0 +1,226 @@
+/* Media queries to determine "Description sidebar"
+    -On bottom for mobile/portrait
+    -On side for desktop/landscape */
+/* MOBILE / SCALED WINDOW*/
+@media (max-width: 1023px){
+    /* Remove empty from html and body elements */
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+    /* Tooltip design for BOTTOM of the page */
+    img {
+        width: 80px;
+    } 
+    #sidebar {
+        display: none;
+        background-color: rgb(72, 61, 139);
+        position: fixed;
+        bottom: 0;
+        height: fit-content;
+        width: 100%;
+    }
+    #sidebar fieldset {
+        display: none;
+    }
+    #itemDisplay {
+        float: left;
+        margin-inline: 8px;
+    }
+    #itemDisplay img {
+        width: 120px;
+    }
+    .container, h2 {
+        padding-inline: 8px;
+    }
+    #topBar {
+        margin: 8px;
+    }
+    @media (max-width: 320px){
+        img {
+            width: 60px;
+        }
+        #itemDisplay img {
+            display: none;
+        }
+    }
+    @media (max-width: 425px) and (min-width: 321px){
+        img {
+            width: 70px;
+        }
+        #itemDisplay img {
+            display: none;
+        }
+    }
+}
+/* DESKTOP / FULLSCREEN */
+@media screen and (min-width: 1024px){
+    /* Tooltip design for LEFT of the page */
+    img {
+        width: 100px;
+    }    
+    #sidebar {
+        background-color: rgb(72, 61, 139);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        text-align: center;
+    }
+    #items {
+        position: relative;
+        left: 300px;
+        /* Calc width = viewport width - sidebar width + #main margin size */
+        width: calc(100vw - 328px);
+    }
+    #synergy {
+        position: absolute;
+        bottom: 110px;
+        width: 265px;
+    }
+    #synergy img {
+        display: inline-table;
+        width: 30px;
+    }
+    #filter {
+        position: absolute;
+        bottom: 10px;
+        width: 265px;
+    }
+    #itemDisplay img {
+        width: 180px;
+    }
+    #topBar {
+        display: none;
+    }
+    p {
+        font-size: 20px;
+    }
+    @media (max-width: 1279px){
+        #synergy img {
+            width: 25px;
+        }
+        #itemDisplay img {
+            width: 130px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+/* ALL */
+* {
+    font-family:'Courier New';
+}
+#itemName {
+    display: none;
+}
+body {
+    background-image: url(images/ar0agg22swatch.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+h2, p, legend, label {
+    color: antiquewhite;
+}
+h2 {
+    margin: 10px 0;
+    border-bottom: solid 3px;
+}
+p {
+    text-align: left;
+    margin: 8px;
+}
+/* Container stylings */
+.container {
+    text-align: center;
+}
+.container div {
+    display: inline-block;
+    margin: 4px auto;
+    border-radius: 15px;
+}
+/* Border colours of item variations */
+.common {
+    border: solid 2px;
+    border-color: rgba(200, 200, 200, 0.7);
+    background-color: rgba(150, 150, 150, 0.3);
+}
+.common:hover {
+    background-color: rgba(210, 210, 210, 0.3);;
+}
+.uncommon {
+    border: solid 2px;
+    border-color: rgba(100, 200, 50, 0.7);
+    background-color: rgba(20, 130, 0, 0.3);
+}
+.uncommon:hover {
+    background-color: rgba(110, 210, 60, 0.3);
+}
+.legendary {
+    border: solid 2px;
+    border-color: rgba(255, 60, 60, 0.7);
+    background-color: rgba(200, 0, 0, 0.3);
+}
+.legendary:hover {
+    background-color: rgba(255, 70, 70, 0.3);
+}
+.boss {
+    border: solid 2px;
+    border-color: rgba(180, 215, 0, 0.7);
+    background-color: rgba(190, 205, 10, 0.3);
+}
+.boss:hover {
+    background-color: rgba(235, 235, 80, 0.3);
+}
+.lunar {
+    border: solid 2px;
+    border-color: rgba(90, 180, 255, 0.7);
+    background-color: rgba(90, 180, 255, 0.3);
+}
+.lunar:hover {
+    background-color: rgba(120, 190, 255, 0.4);
+}
+.equipment {
+    border: solid 2px;
+    border-color: rgba(255, 140, 30, 0.7);
+    background-color: rgba(200, 90, 0, 0.3);
+}
+.equipment:hover {
+    background-color: rgba(255, 180, 100, 0.3);
+}
+.void {
+    border: solid 2px;
+    border-color: rgba(255, 100, 180, 0.7);
+    background-color: rgba(240, 75, 200, 0.3);
+}
+.void:hover {
+    background-color: rgba(255, 110, 255, 0.3);
+}
+/* Colour styles for highlighting text in item description */
+/* Damage Numbers */
+.dmg {
+    color:rgb(255, 215, 0);
+}
+/* HP Increase */
+.hpUP {
+    color:rgb(124, 252, 0);
+}
+/* HP Threshold */
+.hpLimit {
+    color:rgb(199, 22, 22);
+}
+/* Utility */
+.util {
+    color:rgb(0, 255, 255);
+}
+/* Stacking */
+.stack {
+    font-style: oblique;
+    color:rgb(128, 128, 128);
+}
+/* Corrupt */
+.corrupt {
+    color: rgb(255, 100, 180);
+}
